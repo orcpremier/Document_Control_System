@@ -1,8 +1,8 @@
 // ==========================================
 // SUPABASE CONFIGURATION
 // ==========================================
-var SUPABASE_URL = 'https://mtqtuepfmobdbjoorwti.supabase.co // 👈 นำ URL จาก Supabase มาวาง
-var SUPABASE_KEY = 'ap-southeast-1';             // 👈 นำ Anon Key มาวาง
+var SUPABASE_URL = "https://mtqtuepfmobdbjoorwti.supabase.co"; // 👈 นำ URL จาก Supabase มาวาง
+var SUPABASE_KEY = "sb_publishable_wCZYb_ahbzGMKJHl1rzh-A_OvkbYQm9";             // 👈 นำ Anon Key มาวาง
 
 /**
  * ฟังก์ชัน Helper หลักสำหรับส่ง Request ไปยัง Supabase REST API
