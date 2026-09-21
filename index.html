@@ -9,9 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Supabase JS Library & Config File -->
+  <!-- Supabase JS Library -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- โหลด config.js -->
   <script src="config.js"></script>
+
+  <!-- Fallback Script ป้องกันปัญหา supabaseClient is not defined -->
+  <script>
+    if (typeof supabaseClient === 'undefined') {
+      const SUPABASE_URL = 'https://mtqtuepfmobdbjoorwti.supabase.co';
+      const SUPABASE_KEY = 'sb_publishable_wCZYb_ahbzGMKJHI1rzh-A_OvkbYQm9';
+      var supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    }
+  </script>
 
   <style>
     :root {
@@ -936,7 +947,7 @@ var currentActiveDept = '';
 var currentActiveSubfolder = '';
 
 // ==========================================
-// SUPABASE DIRECT API CALLS (ไม่ผ่าน Apps Script)
+// SUPABASE DIRECT API CALLS
 // ==========================================
 async function callBackend(fnName, args, successCb, failCb) {
   try {
